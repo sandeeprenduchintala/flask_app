@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+<title>Home</title>{%endblock%}
+
+{% block body %}
+
+<div class ="center">
+    <div class="container">
+<form method="POST">
+    Product<input type = "text" name ="name"/>
+        <br>
+    <label for="Origin">Origin</label><br>
+    <input list="Origin_list" name="Origin" id="Origin">
+    <datalist id="Origin_list">
+      <option value="Bangalore">
+      <option value="Chennai">
+      <option value="Mysore">
+      <option value="Mangalore">
+      <option value="Hyderabad">
+        <option value="">
+      </datalist>
+      <br>
+    <label for="destination">Destination</label>
+        <input list="destination_list" name="destination" id="destination">
+        <datalist id="destination_list">
+        <option value="Bangalore">
+        <option value="Chennai">
+        <option value="Mysore">
+        <option value="Mangalore">
+        <option value="Hyderabad">
+            <option value="">
+        </datalist>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    <br>
+    <br>
+       {{message}}
+
+        
+      </div>
+      
+      
+</form>
+
+</div>
+
+{%endblock%}

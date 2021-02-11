@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block head %} 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<title>Report</title>
+<style>
+    .center {
+                font-size: 205%;
+              margin: auto;
+              width: 100%;
+              padding: 1000px;
+            }
+</style>
+{%endblock%}
+
+
+{% block body %}
+<div class="center">
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+              <th>Location</th>
+              <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% for rows in rows %}
+              <td>  {{ rows[0] }}</td> 
+              <td>  {{ rows[1] }}</td> 
+
+            </tr>
+            {% endfor%}
+        </tbody>
+        </table>
+    </div>
+    </div>
+    {%endblock%} 
+
+
+
+
+
+
+
+
+
+
